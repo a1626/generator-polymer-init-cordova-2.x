@@ -1,0 +1,54 @@
+{
+  "name": "generator-polymer-init-cordova-2.x",
+  "version": "1.0.0",
+  "description": "Polymer cli generator for cordova app",
+  "homepage": "",
+  "author": {
+    "name": "a1626",
+    "email": "gupta.abhishek1804@gmail.com",
+    "url": "https://github.com/a1626"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "polymer",
+    "yeoman-generator",
+    "web-components",
+    "generator",
+    "polymer-cli"
+  ],
+  "devDependencies": {
+    "yeoman-test": "^1.6.0",
+    "yeoman-assert": "^3.0.0",
+    "coveralls": "^2.12.0",
+    "nsp": "^2.6.3",
+    "eslint": "^3.18.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^19.0.1"
+  },
+  "dependencies": {
+    "yeoman-generator": "^1.0.0",
+    "chalk": "^1.1.3",
+    "yosay": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "https://github.com/a1626/generator-polymer-init-cordova-2.x.git",
+  "license": "MIT"
+}
