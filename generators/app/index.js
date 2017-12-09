@@ -151,11 +151,6 @@ module.exports = class extends Generator {
   writing() {
     if(this.props.proxy) {
       this.fs.copyTpl(
-        this.templatePath('bowerrc.txt'),
-        this.destinationPath('.bowerrc'),
-        this.props
-      );
-      this.fs.copyTpl(
         this.templatePath('gitconfig.txt'),
         this.destinationPath('.gitconfig'),
         this.props
@@ -165,6 +160,11 @@ module.exports = class extends Generator {
       this.props.https = "";
   }
 
+    this.fs.copyTpl(
+      this.templatePath('bowerrc.txt'),
+      this.destinationPath('.bowerrc'),
+      this.props
+    );
     this.fs.copyTpl(
       `${this.templatePath()}/**/!(*.txt)`,
       this.destinationPath(),
@@ -181,7 +181,8 @@ module.exports = class extends Generator {
 
   install() {
     this.installDependencies({
-      npm: false
+      npm: false,
+      bower: true
     });
     let i=0;
     while (this.props.platforms && i<this.props.platforms.length) {

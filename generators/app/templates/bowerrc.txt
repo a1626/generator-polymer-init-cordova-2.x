@@ -1,4 +1,5 @@
 {
+  "directory": "www/bower_components",
   "proxy":"<%= http %>",
   "https-proxy":"<%= https %>"
 }
