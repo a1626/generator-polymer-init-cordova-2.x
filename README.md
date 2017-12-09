@@ -28,6 +28,8 @@ npm install -g generator-polymer-init-cordova-2.x
 - Then in the directory where you want to create a new project use `polymer init` command and you will find a new package named `cordova-2.x`.
 - Choose the package and you will be asked for some configurations in order to start your project.
 
+__Note__: If you want to test your application in browser, you can run `polymer serve` inside the `www` folder.
+
 ## Structure
    ```
     .
